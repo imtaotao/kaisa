@@ -7,7 +7,18 @@
 <body>
 <script src="./dist/kaisa.umd.js"></script>
 <script>
-  
+  const ctx = new Kaisa.Context({
+    loadPackageFiles: Kaisa.defaultLoader('https://registry.npmjs.org'),
+  });
+
+  console.log(ctx);
+  ctx.requireAsync('react').then(m => {
+    console.log(m)
+  })
+
+  ctx.requireAsync('react').then(m => {
+    console.log(m)
+  })
 </script>
 </body>
 </html>

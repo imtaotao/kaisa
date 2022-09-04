@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "fetch-npm-package": "^1.0.15",
+    "node-package-exports": "^1.0.2",
     "semver": "^7.3.7"
   }
 }
