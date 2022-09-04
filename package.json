@@ -7,7 +7,7 @@
   "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "rollup --config",
-    "dev": "http-server ./ -o | rollup --config --watch",
+    "dev": "http-server ./",
     "format": "prettier --write --parser typescript \"src/**/*.(js|ts?(x))\""
   },
   "author": "imtaotao",
@@ -38,6 +38,7 @@
     "typescript": "^4.5.5"
   },
   "dependencies": {
+    "builtins": "^5.0.1",
     "fetch-npm-package": "^1.0.15",
     "node-package-exports": "^1.0.2",
     "semver": "^7.3.7"
