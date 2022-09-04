@@ -1,4 +1,4 @@
-import * as semver from 'semver';
+import * as semver from "esm-semver";
 import { isRangeVersion } from "../utils";
 
 // https://github.com/sindresorhus/semver-regex/edit/main/index.js
