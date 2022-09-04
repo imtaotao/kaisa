@@ -1,4 +1,4 @@
-import { compare, intersects } from "semver";
+import * as semver from 'semver';
 import { isRangeVersion } from "../utils";
 
 // https://github.com/sindresorhus/semver-regex/edit/main/index.js
@@ -11,7 +11,7 @@ export function versionSort(versions: Array<string>) {
   return versions.sort((v1, v2) => {
     var sv1 = semverRegex().exec(v1)?.[0] || v1;
     var sv2 = semverRegex().exec(v2)?.[0] || v2;
-    return compare(sv1, sv2);
+    return semver.compare(sv1, sv2);
   });
 }
 
@@ -24,10 +24,10 @@ export const versionComparison = (
   if (local === "latest") local = "";
   if (remote === "latest") remote = "";
   if (!strictCheck || isRangeVersion(remote)) {
-    if (intersects(local, remote)) return true;
+    if (semver.intersects(local, remote)) return true;
     if (typeof getLocalRv === "function") {
       local = getLocalRv();
-      if (local) return intersects(local, remote);
+      if (local) return semver.intersects(local, remote);
     }
   } else {
     if (local === remote) return true;

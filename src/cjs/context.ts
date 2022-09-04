@@ -48,7 +48,7 @@ export class Context {
     if (!this.packageJson.has(jsonFile)) {
       this.packageJson.set(jsonFile, JSON.parse(jsonFile.code));
     }
-    return this.packageJson.get(jsonFile);
+    return this.packageJson.get(jsonFile)!;
   }
 
   private getRealPath(

@@ -38,6 +38,7 @@
     "typescript": "^4.5.5"
   },
   "dependencies": {
+    "@types/semver": "^7.3.12",
     "builtins": "^5.0.1",
     "fetch-npm-package": "^1.0.15",
     "node-package-exports": "^1.0.2",

@@ -46,7 +46,7 @@ export function defaultLoader(registry?: string) {
     throw new Error(`"${spec}" does not match an available version`);
   };
 
-  return async (name: string, version?: string) => {
+  return async (name: string, version = '') => {
     const spec = `${registry}:${name}@${version}`;
     if (!loadings[spec]) {
       if (!version || isRangeVersion(version)) {

@@ -19,7 +19,7 @@ export const ResourceManager = {
   remove(name: string, version = "") {
     const packages = this.packageContainer[name];
     if (packages) {
-      packages[version] = null;
+      delete packages[version];
     }
   },
 
@@ -37,7 +37,7 @@ export const ResourceManager = {
       this.packageContainer[name] = packages = Object.create(null);
     }
     if (!packages[version]) {
-      packages[version] = value;
+      packages[version] = value!;
     }
   },
 };

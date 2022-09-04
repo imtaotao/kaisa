@@ -37,7 +37,7 @@ export const isRangeVersion = (v: string) => {
   return (
     v === "*" ||
     v === "latest" ||
-    v.includes("x") ||
+    v.includes(".x") || // 1.2.x
     v.includes("||") ||
     v.startsWith("^") ||
     v.startsWith("~") ||
