@@ -1,5 +1,4 @@
-// @ts-ignore
-import builtins from "builtins";
+import builtins from "esm-builtins";
 import { parseModuleId } from "node-package-exports";
 import type { ModuleIdData } from "node-package-exports";
 
