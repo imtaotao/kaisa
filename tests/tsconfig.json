@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "rootDir": ".",
     "outDir": "dist",
     "module": "ESNext",
     "target": "es6",
@@ -11,9 +10,17 @@
     "moduleResolution": "node",
     "allowJs": true,
     "sourceMap": true,
-    "declaration": true,
+    "declaration": false,
     "noImplicitAny": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "paths": {
+      "kaisa": ["../src/index.ts"]
+    }
   },
-  "include": ["src"]
+  "include": [
+    "scripts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
