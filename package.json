@@ -52,8 +52,8 @@
     "webpack": "^5.74.0"
   },
   "dependencies": {
-    "esm-builtins": "^0.0.5",
-    "esm-semver": "^0.0.8",
+    "esm-builtins": "^0.0.6",
+    "esm-semver": "^0.0.9",
     "fetch-npm-package": "^1.0.15",
     "node-package-exports": "^1.0.2"
   }
